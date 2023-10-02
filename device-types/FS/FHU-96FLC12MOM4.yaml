@@ -202,38 +202,38 @@ front-ports:
     rear_port_position: 1
 rear-ports:
   - name: Group 1
-    type: lc
+    type: mpo
     positions: 4
   - name: Group 2
-    type: lc
+    type: mpo
     positions: 4
   - name: Group 3
-    type: lc
+    type: mpo
     positions: 4
   - name: Group 4
-    type: lc
+    type: mpo
     positions: 4
   - name: Group 5
-    type: lc
+    type: mpo
     positions: 4
   - name: Group 6
-    type: lc
+    type: mpo
     positions: 4
   - name: Group 7
-    type: lc
+    type: mpo
     positions: 4
   - name: Group 8
-    type: lc
+    type: mpo
     positions: 4
   - name: Group 9
-    type: lc
+    type: mpo
     positions: 4
   - name: Group 10
-    type: lc
+    type: mpo
     positions: 4
   - name: Group 11
-    type: lc
+    type: mpo
     positions: 4
   - name: Group 12
-    type: lc
+    type: mpo
     positions: 4
