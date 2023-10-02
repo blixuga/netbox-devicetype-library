@@ -1,0 +1,239 @@
+---
+manufacturer: FS
+model: FHU-96FLC12MOM4
+slug: fs-fhu-96flc12mom4
+part_number: FHU-96FLC12MOM4 (#43514)
+u_height: 1.0
+is_full_depth: false
+comments: FHU 1U Breakout Cassette, 96 Fibers OM4 Multimode, Universal Polarity, 12 x MTP®-8 to 24 x LC Quad (Aqua)
+is_powered: false
+front-ports:
+    - name: Front Group 1 Pair 1/12
+    type: lc
+    rear_port: Group 1
+    rear_port_position: 1
+  - name: Front Group 1 Pair 2/11
+    type: lc
+    rear_port: Group 1
+    rear_port_position: 1
+  - name: Front Group 1 Pair 3/10
+    type: lc
+    rear_port: Group 1
+    rear_port_position: 1
+  - name: Front Group 1 Pair 4/9
+    type: lc
+    rear_port: Group 1
+    rear_port_position: 1
+  - name: Front Group 2 Pair 1/12
+    type: lc
+    rear_port: Group 2
+    rear_port_position: 2
+  - name: Front Group 2 Pair 2/11
+    type: lc
+    rear_port: Group 2
+    rear_port_position: 2
+  - name: Front Group 2 Pair 3/10
+    type: lc
+    rear_port: Group 2
+    rear_port_position: 2
+  - name: Front Group 2 Pair 4/9
+    type: lc
+    rear_port: Group 2
+    rear_port_position: 2
+  - name: Front Group 3 Pair 1/12
+    type: lc
+    rear_port: Group 3
+    rear_port_position: 3
+  - name: Front Group 3 Pair 2/11
+    type: lc
+    rear_port: Group 3
+    rear_port_position: 3
+  - name: Front Group 3 Pair 3/10
+    type: lc
+    rear_port: Group 3
+    rear_port_position: 3
+  - name: Front Group 3 Pair 4/9
+    type: lc
+    rear_port: Group 3
+    rear_port_position: 3
+  - name: Front Group 4 Pair 1/12
+    type: lc
+    rear_port: Group 4
+    rear_port_position: 4
+  - name: Front Group 4 Pair 2/11
+    type: lc
+    rear_port: Group 4
+    rear_port_position: 4
+  - name: Front Group 4 Pair 3/10
+    type: lc
+    rear_port: Group 4
+    rear_port_position: 4
+  - name: Front Group 4 Pair 4/9
+    type: lc
+    rear_port: Group 4
+    rear_port_position: 4
+  - name: Front Group 5 Pair 1/12
+    type: lc
+    rear_port: Group 5
+    rear_port_position: 5
+  - name: Front Group 5 Pair 2/11
+    type: lc
+    rear_port: Group 5
+    rear_port_position: 5
+  - name: Front Group 5 Pair 3/10
+    type: lc
+    rear_port: Group 5
+    rear_port_position: 5
+  - name: Front Group 5 Pair 4/9
+    type: lc
+    rear_port: Group 5
+    rear_port_position: 5
+  - name: Front Group 6 Pair 1/12
+    type: lc
+    rear_port: Group 6
+    rear_port_position: 6
+  - name: Front Group 6 Pair 2/11
+    type: lc
+    rear_port: Group 6
+    rear_port_position: 6
+  - name: Front Group 6 Pair 3/10
+    type: lc
+    rear_port: Group 6
+    rear_port_position: 6
+  - name: Front Group 6 Pair 4/9
+    type: lc
+    rear_port: Group 6
+    rear_port_position: 6
+  - name: Front Group 7 Pair 1/12
+    type: lc
+    rear_port: Group 7
+    rear_port_position: 7
+  - name: Front Group 7 Pair 2/11
+    type: lc
+    rear_port: Group 7
+    rear_port_position: 7
+  - name: Front Group 7 Pair 3/10
+    type: lc
+    rear_port: Group 7
+    rear_port_position: 7
+  - name: Front Group 7 Pair 4/9
+    type: lc
+    rear_port: Group 7
+    rear_port_position: 7
+  - name: Front Group 8 Pair 1/12
+    type: lc
+    rear_port: Group 8
+    rear_port_position: 8
+  - name: Front Group 8 Pair 2/11
+    type: lc
+    rear_port: Group 8
+    rear_port_position: 8
+  - name: Front Group 8 Pair 3/10
+    type: lc
+    rear_port: Group 8
+    rear_port_position: 8
+  - name: Front Group 8 Pair 4/9
+    type: lc
+    rear_port: Group 8
+    rear_port_position: 8
+  - name: Front Group 9 Pair 1/12
+    type: lc
+    rear_port: Group 9
+    rear_port_position: 9
+  - name: Front Group 9 Pair 2/11
+    type: lc
+    rear_port: Group 9
+    rear_port_position: 9
+  - name: Front Group 9 Pair 3/10
+    type: lc
+    rear_port: Group 9
+    rear_port_position: 9
+  - name: Front Group 9 Pair 4/9
+    type: lc
+    rear_port: Group 9
+    rear_port_position: 9
+  - name: Front Group 10 Pair 1/12
+    type: lc
+    rear_port: Group 10
+    rear_port_position: 10
+  - name: Front Group 10 Pair 2/11
+    type: lc
+    rear_port: Group 10
+    rear_port_position: 10
+  - name: Front Group 10 Pair 3/10
+    type: lc
+    rear_port: Group 10
+    rear_port_position: 10
+  - name: Front Group 10 Pair 4/9
+    type: lc
+    rear_port: Group 10
+    rear_port_position: 10
+  - name: Front Group 11 Pair 1/12
+    type: lc
+    rear_port: Group 11
+    rear_port_position: 11
+  - name: Front Group 11 Pair 2/11
+    type: lc
+    rear_port: Group 11
+    rear_port_position: 11
+  - name: Front Group 11 Pair 3/10
+    type: lc
+    rear_port: Group 11
+    rear_port_position: 11
+  - name: Front Group 11 Pair 4/9
+    type: lc
+    rear_port: Group 11
+    rear_port_position: 11
+  - name: Front Group 12 Pair 1/12
+    type: lc
+    rear_port: Group 12
+    rear_port_position: 12
+  - name: Front Group 12 Pair 2/11
+    type: lc
+    rear_port: Group 12
+    rear_port_position: 12
+  - name: Front Group 12 Pair 3/10
+    type: lc
+    rear_port: Group 12
+    rear_port_position: 12
+  - name: Front Group 12 Pair 4/9
+    type: lc
+    rear_port: Group 12
+    rear_port_position: 12
+rear-ports:
+  - name: Group 1
+    type: lc
+    positions: 1
+  - name: Group 2
+    type: lc
+    positions: 2
+  - name: Group 3
+    type: lc
+    positions: 3
+  - name: Group 4
+    type: lc
+    positions: 4
+  - name: Group 5
+    type: lc
+    positions: 5
+  - name: Group 6
+    type: lc
+    positions: 6
+  - name: Group 7
+    type: lc
+    positions: 7
+  - name: Group 8
+    type: lc
+    positions: 8
+  - name: Group 9
+    type: lc
+    positions: 9
+  - name: Group 10
+    type: lc
+    positions: 10
+  - name: Group 11
+    type: lc
+    positions: 11
+  - name: Group 12
+    type: lc
+    positions: 12
