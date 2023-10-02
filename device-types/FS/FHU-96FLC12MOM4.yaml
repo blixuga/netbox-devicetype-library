@@ -203,37 +203,37 @@ front-ports:
 rear-ports:
   - name: Group 1
     type: lc
-    positions: 1
+    positions: 4
   - name: Group 2
     type: lc
-    positions: 2
+    positions: 4
   - name: Group 3
     type: lc
-    positions: 3
+    positions: 4
   - name: Group 4
     type: lc
     positions: 4
   - name: Group 5
     type: lc
-    positions: 5
+    positions: 4
   - name: Group 6
     type: lc
-    positions: 6
+    positions: 4
   - name: Group 7
     type: lc
-    positions: 7
+    positions: 4
   - name: Group 8
     type: lc
-    positions: 8
+    positions: 4
   - name: Group 9
     type: lc
-    positions: 9
+    positions: 4
   - name: Group 10
     type: lc
-    positions: 10
+    positions: 4
   - name: Group 11
     type: lc
-    positions: 11
+    positions: 4
   - name: Group 12
     type: lc
-    positions: 12
+    positions: 4
