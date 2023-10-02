@@ -8,7 +8,7 @@ is_full_depth: false
 comments: FHU 1U Breakout Cassette, 96 Fibers OM4 Multimode, Universal Polarity, 12 x MTP®-8 to 24 x LC Quad (Aqua)
 is_powered: false
 front-ports:
-    - name: Front Group 1 Pair 1/12
+  - name: Front Group 1 Pair 1/12
     type: lc
     rear_port: Group 1
     rear_port_position: 1
