@@ -1,10 +1,11 @@
 import os
 
+
 class DeviceType:
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, definition, file_path):
+    def __init__(self, definition, file_path, change_type):
         self.file_path = file_path
         self.isDevice = True
         self.definition = definition
@@ -16,6 +17,7 @@ class DeviceType:
         self.part_number = definition.get('part_number', "")
         self._slug_part_number = self._slugify_part_number()
         self.failureMessage = None
+        self.change_type = change_type
 
     def _slugify_manufacturer(self):
         return self.manufacturer.casefold().replace(" ", "-").replace("sfp+", "sfpp").replace("poe+", "poep").replace("-+", "-plus-").replace("+", "-plus").replace("_", "-").replace("!", "").replace("/", "-").replace(",", "").replace("'", "").replace("*", "-").replace("&", "and")
@@ -26,13 +28,13 @@ class DeviceType:
         return None
 
     def _slugify_model(self):
-        slugified = self.model.casefold().replace(" ", "-").replace("sfp+", "sfpp").replace("poe+", "poep").replace("-+", "-plus").replace("+", "-plus-").replace("_", "-").replace("&", "-and-").replace("!", "").replace("/", "-").replace(",", "").replace("'", "").replace("*", "-")
+        slugified = self.model.casefold().replace(" ", "-").replace("sfp+", "sfpp").replace("poe+", "poep").replace("-+", "-plus").replace("+", "-plus-").replace("_", "-").replace("&", "-and-").replace("!", "").replace("/", "-").replace(",", "").replace("'", "").replace("*", "-").replace("(", "").replace(")", "").replace(";", "")
         if slugified.endswith("-"):
             slugified = slugified[:-1]
         return slugified
 
     def _slugify_part_number(self):
-        slugified = self.part_number.casefold().replace(" ", "-").replace("-+", "-plus").replace("+", "-plus-").replace("_", "-").replace("&", "-and-").replace("!", "").replace("/", "-").replace(",", "").replace("'", "").replace("*", "-")
+        slugified = self.part_number.casefold().replace(" ", "-").replace("-+", "-plus").replace("+", "-plus-").replace("_", "-").replace("&", "-and-").replace("!", "").replace("/", "-").replace(",", "").replace("'", "").replace("*", "-").replace("(", "").replace(")", "").replace(";", "")
         if slugified.endswith("-"):
             slugified = slugified[:-1]
         return slugified
@@ -48,8 +50,9 @@ class DeviceType:
             pass
         elif len(known_slug_list_intersect) == 1:
             if self.file_path not in known_slug_list_intersect[0][1]:
-                self.failureMessage = f'{self.file_path} has a duplicate slug: "{self.slug}"'
-                return False
+                if 'R' not in self.change_type:
+                    self.failureMessage = f'{self.file_path} has a duplicate slug: "{self.slug}"'
+                    return False
             return True
         else:
             self.failureMessage = f'{self.file_path} has a duplicate slug "{self.slug}"'
@@ -122,11 +125,33 @@ class DeviceType:
         self.failureMessage = f'{self.file_path} has does not appear to have a valid power source. Ensure either "power-ports" or "interfaces" with "poe_mode" is defined.'
         return False
 
+    def ensure_no_vga(self):
+        NO_VGA_COMPONENTS = [
+            'console-ports',
+            'console-server-ports',
+            'interfaces',
+            'front-ports',
+            'rear-ports'
+        ]
+
+        for component_to_test in NO_VGA_COMPONENTS:
+            test_component = self.definition.get(component_to_test, False)
+
+            if test_component:
+                for component in test_component:
+                    name = component.get('name', "")
+                    label = component.get('label', "")
+                    if "vga" in name.casefold() or "vga" in label.casefold():
+                        self.failureMessage = f'{self.file_path} has a VGA component defined. VGA is not a valid definition at this time.'
+                        return False
+
+        return True
+
 class ModuleType:
     def __new__(cls, *args, **kwargs):
         return super().__new__(cls)
 
-    def __init__(self, definition, file_path):
+    def __init__(self, definition, file_path, change_type):
         self.file_path = file_path
         self.isDevice = False
         self.definition = definition
@@ -135,6 +160,7 @@ class ModuleType:
         self._slug_model = self._slugify_model()
         self.part_number = definition.get('part_number', "")
         self._slug_part_number = self._slugify_part_number()
+        self.change_type = change_type
 
     def get_filepath(self):
         return self.file_path
